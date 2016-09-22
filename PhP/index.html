@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<head>
+<title></title>
+</head>
+<body>
+<?php
+$size = 50;
+$interval = 20;
+foreach ($files as $file):
+    if ($file === "." || $file === "..")
+        continue;
+    $src = $dir.$file;
+    if($size>=200){
+    $size=50;
+ 
+}
+?>
+ 
+    <div style='float:left;padding:13px;margin:5px;background: rgb(64,199,129);'>
+        <a href='<?=$src?>'>
+            <img src='<?=$src?>' height='<?=$size?>px' style='border-radius:5px;'>
+        </a>
+    </div>
+<?php
+    $size+=$interval;
+endforeach;
+<!--<img src="http://cdn2.pitchfork.com/longform/379/mastering-1-matmos-quote.gif">-->
+<!--<script src="main.js"></script>-->
+</body>
+</html>
